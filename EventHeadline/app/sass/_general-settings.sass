@@ -1,0 +1,238 @@
+//****** GENERAL
+
+@import bourbon/bourbon
+@import 'normalize'
+@import 'sprite'
+@import 'animate'
+//******* FONTS
+@include font-face("Intro-Caps", "../fonts/intro-Regular-caps", normal, normal, $file-formats: eot woff2 woff ttf svg)
+
+a,
+button
+  outline: none
+  &:hover,
+  &:focus,
+  &:active
+    outline: none
+    text-decoration: none
+h1, h2, h3, p, li, ul
+  padding: 0
+  margin: 0
+  list-style: none
+  font-weight: normal
+button
+  background: none
+  border: 0
+
+h3
+  font-family: 'Intro-Caps'
+  font-size: 25px
+  text-transform: uppercase
+  color: #282828
+  font-weight: normal
+h2
+  padding-bottom: 50px
+  font-family: 'Intro-Caps'
+  font-weight: normal
+  font-size: 50px
+  line-height: 1.07
+  text-align: center
+  color: #282828
+  text-transform: uppercase
+
+
+//********* Variables
+$main-color-orange: #ff6707
+$white-color: #fff
+
+//************ MIXINS
+
+// mixin for section NEWS
+
+// this mixin for image which doesn`t have a button..
+// ..and after hover it shows up
+@mixin article-img-hover
+  a
+    position: absolute
+    bottom: 40px
+    right: 40px
+    font-family: 'Intro-Caps'
+    font-size: 20px
+    color: $white-color
+    z-index: 1
+    opacity: 0
+    transition: all .5s
+  &::after
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    background: transparent
+    transition: all .5s
+  &:hover
+    &::after
+      background: rgba(255, 103, 0, .9)
+    a
+      opacity: 1
+
+//this mixin is also for image which doesn't have a button..
+//..only if its max-width: 992px, take away the hover effect,
+// and adds some feature
+@mixin article-img-hover-max-width-992
+  a
+    padding: 0 8px
+    opacity: 1
+    font-size: 25px
+    color: $white-color
+    border: 1px solid $white-color
+  &::after
+    background: rgba(255, 103, 0, .9)
+
+// this mixin for article which doesn't have img
+// all styles of this article
+@mixin article-white-bg
+  position: relative
+  padding-left: 40px
+  height: 440px
+  background: #fff
+  transition: all .5s
+  h3
+    color: #000
+  p
+    padding: 30px 0 10px
+    font-family: Helvetica
+    font-size: 16.7px
+    color: $main-color-orange
+  a
+    position: absolute
+    bottom: 40px
+    right: 40px
+    font-family: 'Intro-Caps'
+    font-size: 20px
+    color: $main-color-orange
+  &:hover
+    background: $main-color-orange
+    a, p, h3
+      color: $white-color
+
+// this mixin is for all articles which have image..
+// style for img and its parent 
+@mixin article-img
+  position: relative
+  height: 300px
+  display: flex
+  background: #555
+  img
+    position: absolute
+    width: 100%
+    height: 100%
+
+// this mixin is for articles which have button on img..
+// btn such as on video with slightly changed style..
+// other styles taken from .video-button
+@mixin open-article
+  height: 70px
+  width: 70px
+  margin: auto
+  &::after
+    left: 29px
+    top: 21px
+    //margin-top: -2px
+
+// ./end mixin for NEWS section
+
+
+// mixin for section OUR WORK
+@mixin img-after-overlay
+  &::after
+    position: absolute
+    top: 0
+    left: 0
+    content: ''
+    width: 100%
+    height: 100%
+    background: rgba(255, 103, 0, .9) url('../img/icon-new-white.png') no-repeat
+    background-position: 50% 20%
+    background-size: 38px 37px
+  span, p
+    opacity: 1
+// end mixin for section OUR WORK
+
+
+
+// mixin for btn 'view more'
+@mixin view-more
+  padding: 50px 0 80px
+  text-align: center
+  display: block
+  a
+    display: inline-block
+    font-family: 'Intro-Caps'
+    font-size: 20px
+    letter-spacing: 5px
+    color: $main-color-orange
+    &:hover
+      color: darken($main-color-orange, 15%)
+  p
+    @include sprite($arrow-down-black)
+    display: inline-block
+    margin-top: 20px
+  strong
+    padding-left: 11px
+    letter-spacing: 5px
+    font-weight: normal
+    display: none
+// end mixin for btn 'view more'
+
+
+
+// end MIXINS
+
+
+
+//***** animation
+@include animate-fadeInUp
+
+
+
+
+
+
+//********* popup fancybox
+@mixin fancybox-nav
+  width: 21px !important
+  height: 36px !important
+  visibility: visible !important
+  background-image: url('../img/sprite/sprite.png') !important
+.fancybox-overlay
+  background: rgba(0, 0, 0, .8) !important
+.fancybox-skin
+  margin-left: -1px !important
+  padding: 0 !important
+  box-shadow: none !important
+  background: transparent !important
+.fancybox-inner
+  height: auto !important
+  overflow: hidden !important
+  margin-bottom: 60px !important
+.fancybox-close
+  top: 60px !important
+  right: 0 !important
+  margin-right: 10px
+  background-image: url('../img/sprite/sprite.png') !important
+  background-position: -105px -40px !important
+.fancybox-nav
+  top: 800px !important
+  width: 0 !important
+  height: 0 !important
+  background: none !important
+.fancybox-prev
+  span
+    @include fancybox-nav
+    left: 5 !important
+    background-position: -25px -170px !important
+.fancybox-next
+  span
+    @include fancybox-nav
+    right: 11px !important
+    background-position: -117px -96px !important

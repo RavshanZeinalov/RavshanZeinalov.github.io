@@ -1,0 +1,344 @@
+@import 'main'
+
+// //==========  Desktop First Method  ==========
+
+// // Large Devices, Wide Screens
+@media only screen and (max-width: 1200px)
+
+  // section TESTIMONIAL
+  .quote-right
+    position: relative
+    right: 0
+    margin: auto
+  // end section TESTIMONIAL
+
+  //**** SECTION BRIEF US
+  //contact
+  .contact
+    padding-left: 15px
+  // end SECTION BRIEF US
+
+
+
+
+
+
+
+
+
+  //modal popup article in section NEWS & OUR WORK
+  .column-left-popup,
+  .column-right-popup
+    padding: 0 15px 30px
+
+  // our work popup
+  .project-popup1,
+  .project-popup2,
+  .project-popup3
+    .center-in-popup
+      padding: 0 15px
+      img
+        margin-top: 30px
+      p
+        margin-top: 10px
+    .icon-new-popup
+      margin: 0 20px
+  // end modal popup article in section NEWS & OUR WORK
+
+
+  // popup fancyBox
+  .fancybox-nav
+    top: 320px !important
+  // end popup fancyBox
+
+
+
+
+@media  (min-width: 992px) and (max-width: 1200px)
+  // Our Purpose
+  .our-purpose-description
+    min-height: 400px
+  .btn-img-video
+    height: 400px
+  .video-thumbnail
+    height: 400px
+  // end Our Purpose
+
+
+
+// Medium Devices, Desktops
+@media only screen and (max-width: 992px)
+  // general
+  h2
+    font-size: 35px
+  h3
+    font-size: 20px
+  // end general
+
+  // HEADER
+  .list-menu
+    margin-top: 100px
+    text-align: left
+    a
+      padding: 10px 15px
+      font-size: 16px
+  .social-in-menu
+    margin: 20px 0
+  .text-after-logo
+    padding-bottom: 30px
+    font-size: 40px
+    letter-spacing: 3px
+    line-height: 1.2
+  .btn-brief-us
+    a
+      &:hover
+        transform: none
+  // ./ end HEADER
+
+  // Our Purpose
+  .wrapper-description-video
+    flex-wrap: wrap
+  .our-purpose-description
+    min-height: 300px
+  .our-purpose-video
+    width: 500px
+  .btn-img-video
+    height: 300px
+  .video-thumbnail
+    height: 300px
+  // end Our Purpose
+
+
+  // NEWS ARTICLE
+  //article column 1
+  .news-article-column1
+    .article3
+      @include article-img-hover-max-width-992
+  .news-article-column2
+    .article5
+      @include article-img-hover-max-width-992
+  .news-article-column4
+    .article9
+      @include article-img-hover-max-width-992
+  .btn-view-more-article
+    a
+      &:hover
+        transform: none
+  // ./end NEWS ARTICLE
+
+
+  // section WHAT WE DO
+  .list-what-we-do
+    li
+      margin: 1px
+      background: #139b6a
+    h3, p
+      color: $white-color
+  // ./ end section WHAT WE DO
+
+
+  // section OUR WORK
+  #our-work
+    .wrap-title-and-viewcaregory
+      .select-view-category
+        width: 250px
+    .work-project
+      a
+        margin: 1px
+        @include img-after-overlay
+  // end section OUR WORK
+
+
+  // section CLIENTS
+  #wrapper-clients
+    .clients1,
+    .clients2,
+    .clients3,
+    .clients4,
+    .clients5,
+    .clients6
+      margin: 2px
+      background-color: #139b6a
+  // end section CLIENTS
+
+  // section TESTIMONIAL
+  .quote-right
+    a
+      span
+        @include sprite($arrow-down-white)
+        display: inline-block
+        margin-top: 15px
+  // end section TESTIMONIAL
+
+  //**** SECTION BRIEF US
+  //contact
+  .map,
+  .contact
+    padding-top: 50px
+    min-height: 400px
+  // end SECTION BRIEF US
+
+
+
+// Small Devices, Tablets
+@media only screen and (max-width: 768px)
+  // HEADER
+  .text-after-logo
+    padding-bottom: 30px
+    font-size: 40px
+    letter-spacing: 3px
+    line-height: 1.2
+  // ./ end HEADER
+
+  //**** SECTION BRIEF US
+  .carousel-brief-item
+    padding: 0 0 50px
+    font-size: 20px
+    line-height: 1.3
+  //contact
+  .wrap-map-and-contact
+    flex-wrap: wrap
+  .map,
+  .contact
+    width: 100%
+  .contact
+    li
+      padding: 5px 0 50px
+    span
+      position: absolute
+      top: -30px
+  .icon-location
+    float: none
+  // end SECTION BRIEF US
+
+
+  //modal popup article in section NEWS & OUR WORK
+  .wrapp-descr-popup
+    justify-content: center
+    flex-wrap: wrap
+
+
+
+
+
+
+// Small Devices max-width: 480px
+@media only screen and (max-width: 480px)
+  // HEADER
+  .get-in-touch
+    display: none
+  // ./ end HEADER
+
+  // section TESTIMONIAL
+  .quote-right
+    padding: 0 15px
+    width: 260px
+    &:hover
+      .logo-nelson
+        background-size: 220px 100px
+        background-position: 0%
+    p
+      padding-bottom: 50px
+      font-size: 18px
+  .logo-nelson
+    width: 260px
+    background-size: 220px 100px
+    background-position: 0%
+  // end section TESTIMONIAL
+  
+
+  .left-apply-job,
+  .right-apply-job
+    span
+      right: 15px
+      top: 15px
+
+
+
+
+  //modal popup article in section NEWS & OUR WORK
+  // our work popup
+  .project-popup1,
+  .project-popup2,
+  .project-popup3
+    li
+      display: block
+    .icon-new-popup
+      margin: 20px 0
+  // end modal popup article in section NEWS & OUR WORK
+
+  // popup fancyBox
+  .fancybox-nav
+    top: 359px !important
+
+
+
+// fix some section
+@media (min-width: 947px) and (max-width: 1099px)
+  // section news & our work
+  #news,
+  #our-work
+    padding: 0 93px
+@media (min-width: 1100px) and (max-width: 1246px)
+  // section news
+  #news
+    .wrapper-articles,
+    .wrapper-more-article
+      flex-wrap: nowrap
+
+  // section our work
+  #our-work
+    padding: 0 150px
+    // .work-project
+    //   flex-wrap: nowrap
+// end fix some section
+
+
+
+// //==========  Mobile First Method  ==========
+
+// // Custom, iPhone Retina 
+// @media only screen and (min-width: 320px)
+
+
+// // Small Devices, Tablets 
+// @media only screen and (min-width: 768px)
+
+
+
+// // Medium Devices, Desktops
+// @media only screen and (min-width: 992px)
+
+
+
+// // Large Devices, Wide Screens
+@media only screen and (min-width: 1350px)
+
+
+
+
+
+
+
+
+
+  //modal popup fancyBox
+  .fancybox-close
+    top: 50px !important
+    right: -50px !important
+    margin-right: 0
+    background-position: -187px 0px !important
+    &:hover
+      background-position: -105px -40px !important
+  .fancybox-prev
+    span
+      left: -50px !important
+      background-position: -69px -170px !important
+      &:hover
+        background-position: -25px -170px !important
+  .fancybox-next
+    span
+      right: -50px !important
+      background-position: -47px -170px !important
+      &:hover
+        background-position: -117px -96px !important

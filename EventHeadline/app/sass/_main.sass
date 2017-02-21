@@ -1,0 +1,769 @@
+@import 'header'
+
+// OUR PURPOSE
+#our-purpose
+  position: relative
+  z-index: 5
+  padding: 100px 15px 400px
+  background: #e1e1e1
+.wrapper-description-video
+  display: flex
+  justify-content: center
+.our-purpose-description
+  padding: 41px 33px 20px
+  width: 500px
+  min-height: 500px
+  background: $white-color
+  h3
+    padding-bottom: 15px
+    color: $main-color-orange
+  p
+    font-family: Helvetica
+    font-size: 18px
+    color: #282828
+.our-purpose-video
+  width: 700px
+.btn-img-video
+  position: relative
+  height: 500px
+  display: flex
+  align-items: center
+  justify-content: center
+  img
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+.video-button
+  position: relative
+  height: 90px
+  width: 90px
+  background: $main-color-orange
+  cursor: pointer
+  transition: background-color .3s
+  &:hover
+    background-color: #333
+    &::after
+      border-color: transparent transparent transparent $main-color-orange
+  &::after
+    position: absolute
+    left: 38px
+    top: 31px
+    content: ''
+    border-width: 14px 18px
+    transition: border-color .3s
+    border-color: transparent transparent transparent #fff
+    border-style: solid
+.video-thumbnail
+  position: relative
+  height: 500px
+  display: none
+  button
+    position: absolute
+    right: 0
+    top: -22px
+    height: 20px
+    font-size: 10px
+    background: $main-color-orange
+  iframe
+    position: absolute
+    width: 100%
+    height: 100%
+// end OUR PURPOSE
+
+
+// NEWS
+#news
+  position: relative
+  padding: 0 15px
+  background: #f5f5f5
+  .margin-top-news
+    position: relative
+    z-index: 6
+    margin-top: -310px
+  .wrapper-articles
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+
+//article column 1
+.news-article-column1
+  width: 300px
+  .article1
+    @include article-white-bg
+  .article2
+    @include article-img
+  .open-article
+    @extend .video-button
+    @include open-article
+  .article3
+    @include article-img
+    @include article-img-hover
+
+//article column 2
+.news-article-column2
+  width: 300px
+  .article4
+    @include article-img
+  .open-article
+    @extend .video-button
+    @include open-article
+  .article5
+    @include article-img
+    @include article-img-hover
+  .article6
+    @include article-white-bg
+
+//article column 3
+.news-article-column3
+  width: 300px
+  .article7
+    @include article-white-bg
+  .article8
+    @include article-white-bg
+
+//article column 4
+.news-article-column4
+  width: 300px
+  .article9
+    @include article-img
+    @include article-img-hover
+  .article10
+    @include article-white-bg
+  .article11
+    @include article-img
+  .open-article
+    @extend .video-button
+    @include open-article
+
+// wrapper MORE article
+.wrapper-more-article
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  .more-article
+    display: none
+
+// btn view more article
+.btn-view-more-article
+  @include view-more
+.btn-view-more-article-active
+  p
+    position: relative
+    top: -55px
+    transform: rotate(180deg)
+//end NEWS
+
+
+
+//*********** What we do
+#what-we-do
+  padding: 100px  15px
+  background: $white-color
+.title-what-we-do
+  h3
+    padding-bottom: 60px
+    font-family: Helvetica
+    text-transform: none
+    text-align: center
+.list-what-we-do
+  display: flex
+  flex-wrap: wrap
+  max-width: 1200px
+  margin: auto
+  li
+    padding: 50px 0 0
+    flex-grow: 1
+    position: relative
+    height: 300px
+    width: 300px
+    text-align: center
+    background: transparent
+    &:hover
+      background: #139b6a
+      h3, p
+        color: $white-color
+  span
+    display: inline-block
+  h3
+    padding: 30px 0 0
+    line-height: 1
+  p
+    position: absolute
+    bottom: 50px
+    left: 0
+    right: 0
+    font-family: Helvetica
+    font-size: 18px
+    line-height: normal
+    color: #282828
+  //icon & icon hover
+  .product
+    .icon-what-we-do
+      @include sprite($icon-new)
+    &:hover
+      .icon-what-we-do
+        background-position: -78px -96px
+  .conferences
+    .icon-what-we-do
+      @include sprite($icon-conferences)
+    &:hover
+      .icon-what-we-do
+        background-position: 0px -134px
+  .cocktail
+    .icon-what-we-do
+      @include sprite($icon-cocteil-hover)
+    &:hover
+      .icon-what-we-do
+        background-position: -187px -105px
+  .broadcasts
+    .icon-what-we-do
+      @include sprite($icon-broadcasts)
+    &:hover
+      .icon-what-we-do
+        background-position: -78px -134px
+  .banquets
+    .icon-what-we-do
+      @include sprite($icon-banquets)
+    &:hover
+      .icon-what-we-do
+        background-position: -48px -55px
+  .outdoor
+    .icon-what-we-do
+      @include sprite($icon-outdoor-activation)
+    &:hover
+      .icon-what-we-do
+        background-position: -143px -33px
+  .roadshows
+    .icon-what-we-do
+      @include sprite($icon-roadshows)
+    &:hover
+      .icon-what-we-do
+        background-position: -187px -71px
+  .decor
+    .icon-what-we-do
+      @include sprite($icon-decor)
+    &:hover
+      .icon-what-we-do
+        background-position: 0px -55px
+// end What we do
+
+
+//********** Our work
+#our-work
+  .wrap-title-and-viewcaregory
+    position: relative
+    padding: 100px 0 220px
+    background: $main-color-orange
+    z-index: 4
+    h2
+      color: $white-color
+    .select-view-category
+      padding: 0 20px
+      width: 400px
+      height: 50px
+      display: block
+      margin: auto
+      font-family: Helvetica
+      font-size: 18px
+      color: $white-color
+      border: 0
+      appearance: none
+      cursor: pointer
+      background: #f78f4c url('../img/arrow-down-white.png') no-repeat
+      background-position: 95% 50%
+      background-size: 16px 9px
+      outline: none
+      &:hover
+        opacity: .5
+  .wrapper-work-project
+    position: relative
+    margin-top: -160px
+    z-index: 5
+    padding: 0 15px
+  .work-project
+    max-width: 1200px
+    margin: auto
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    img
+      width: 100%
+      height: 100%
+    a
+      position: relative
+      max-height: 300px
+      max-width: 300px
+      display: block
+      text-align: center
+      &:hover
+        @include img-after-overlay
+    span, p
+      position: absolute
+      top: 45%
+      left: 0
+      right: 0
+      z-index: 10
+      font-family: 'Intro-Caps'
+      font-size: 20px
+      font-weight: normal
+      line-height: 1.2
+      color: $white-color
+      opacity: 0
+    p
+      font-family: Helvetica
+      font-size: 17px
+      top: 75%
+  .more-project
+    display: none
+// btn view more project
+.btn-view-more-project
+  @include view-more
+.btn-view-more-project-active
+  p
+    position: relative
+    top: -55px
+    transform: rotate(180deg)
+// end Our work
+
+
+//*********** clients
+#wrapper-clients
+  padding: 100px 15px 70px
+  background: #464646
+  h2
+    color: $white-color
+  ul
+    max-width: 1200px
+    margin: auto
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+  a
+    display: block
+    width: 150px
+    height: 150px
+    transition: all .3s
+  .clients1
+    background: url('../img/clients/icon-clients1.png') center center no-repeat
+    &:hover
+      background: #139b6a url('../img/clients/icon-clients1-hover.png') center center no-repeat
+  .clients2
+    background: url('../img/clients/icon-clients2.png') center center no-repeat
+    &:hover
+      background-color: #139b6a
+  .clients3
+    background: url('../img/clients/icon-clients3.png') center center no-repeat
+    &:hover
+      background: #139b6a url('../img/clients/icon-clients3-hover.png') center center no-repeat
+  .clients4
+    background: url('../img/clients/icon-clients4.png') center center no-repeat
+    &:hover
+      background: #139b6a url('../img/clients/icon-clients4-hover.png') center center no-repeat
+  .clients5
+    background: url('../img/clients/icon-clients5.png') center center no-repeat
+    &:hover
+      background: #139b6a url('../img/clients/icon-clients5-hover.png') center center no-repeat
+  .clients6
+    background: url('../img/clients/icon-clients6.png') center center no-repeat
+    &:hover
+      background: #139b6a url('../img/clients/icon-clients6-hover.png') center center no-repeat
+// end clients
+
+
+
+//****** TESTIMONIALS
+#testimonials
+  background: #139b6a
+  .owl-theme
+    .owl-controls
+      position: absolute
+      left: 0
+      right: 0
+      margin-top: -60px
+      span
+        margin: 5px
+        width: 10px
+        height: 10px
+        background-color: #01fba3
+      .active
+        span
+          border: solid 2px #282828
+          background: transparent
+.carousel-testimonials
+  display: block
+  width: 100%
+.wrap-item-nelson
+  min-height: 546px
+  background: url('../img/testimonials/bg-testimonials-nelson-mandela.png') no-repeat
+.quote-item-width
+  position: relative
+  margin: auto
+  max-width: 1200px
+.quote-right
+  position: absolute
+  right: 150px
+  top: 50px
+  min-height: 100px
+  width: 400px
+  text-align: center
+  &:hover
+    .logo-nelson
+      background: url('../img/testimonials/icon-nelson-hover.png') center center no-repeat
+  .btn-read-quote1,
+  .btn-read-quote2,
+  .btn-read-quote3,
+  .btn-read-quote4,
+  .btn-read-quote5, p
+    padding: 70px 0
+    font-family: 'Intro-Caps'
+    font-size: 20px
+    font-weight: normal
+    color: $white-color
+    line-height: 1.2
+    letter-spacing: 1px
+  .hidden-quote1,
+  .hidden-quote2,
+  .hidden-quote3,
+  .hidden-quote4,
+  .hidden-quote5,
+    display: none
+  .hidden-quote-active
+    display: block
+  .btn-read-quote1,
+  .btn-read-quote2,
+  .btn-read-quote3,
+  .btn-read-quote4,
+  .btn-read-quote5,
+    padding: 15px
+    display: inline-block
+    letter-spacing: 3px
+    cursor: pointer
+    &:hover
+      span
+        @include sprite($arrow-down-white)
+        display: inline-block
+        margin-top: 15px
+.logo-nelson
+  width: 400px
+  height: 118px
+  display: block
+  background: url('../img/testimonials/icon-nelson.png') center center no-repeat
+//end TESTIMONIALS
+
+
+//****** SECTION BRIEF US
+#section-brief-us
+  padding-top: 100px
+  background: #f5f5f5
+  .owl-theme
+    .owl-controls
+      span
+        margin: 6px
+        background-color: #282828
+        opacity: 1
+      .active
+        span
+          border: solid 2px $main-color-orange
+          background: transparent
+.wrap-carousel-brief
+  padding: 0 15px 100px
+.carousel-brief-item
+  margin: auto
+  padding: 0 70px 50px
+  max-width: 1200px
+  font-family: Helvetica
+  font-size: 25px
+  line-height: normal
+  text-align: center
+  color: #282828
+
+//**wrap-map-and-contact
+.wrap-map-and-contact
+  display: flex
+  width: 100%
+.map
+  min-height: 500px
+  width: 60%
+  background: #555
+.contact
+  min-height: 500px
+  padding: 100px 0 0 130px
+  width: 40%
+  background: #464646
+  h4
+    margin: 0
+    padding: 0 0 50px
+    font-family: 'Intro-Caps'
+    font-size: 30px
+    font-weight: normal
+    color: $white-color
+  li
+    position: relative
+    padding-bottom: 25px
+    display: block
+    font-family: Helvetica
+    font-size: 17px
+    line-height: normal
+    color: $white-color
+  p
+    display: inline-block
+  span
+    margin-right: 30px
+    display: inline-block
+  .icon-phone
+    @include sprite($icon-phone)
+  .icon-mail
+    @include sprite($icon-mail)
+  .icon-location
+    @include sprite($icon-location)
+    float: left
+// end SECTION BRIEF US
+
+// SECTION CAREERS
+#careers
+  padding: 100px 15px
+  .after-title-careers
+    padding-bottom: 50px
+    font-family: Helvetica
+    font-size: 25px
+    text-align: center
+    color: #282828
+.wrap-apply-job
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+.left-apply-job,
+.right-apply-job
+  position: relative
+  padding: 40px
+  width: 600px
+  min-height: 300px
+  transition: all .5s
+  span
+    position: absolute
+    right: 40px
+    top: 40px
+  p
+    padding: 30px 0 50px
+    font-family: Helvetica
+    font-size: 18px
+    line-height: normal
+    text-align: left
+  button
+    font-family: 'Intro-Caps'
+    font-size: 20px
+    font-weight: normal
+.left-apply-job
+  background: #f5f5f5
+  &:hover
+    background: $main-color-orange
+    span, button, p, h3
+      color: $white-color
+  span, button
+    color: $main-color-orange
+  p
+    color: #a1a1a1
+.right-apply-job
+  background: $main-color-orange
+  color: $white-color
+  &:hover
+    background: #f5f5f5
+    span, button
+      color: $main-color-orange
+    h3
+      color: #282828
+    p
+      color: #a1a1a1
+  h3
+    color: $white-color
+// end SECTION CAREERS
+
+//******** FOOTER
+#footer
+  position: relative
+  height: 80px
+  background-color: #464646
+  ul
+    position: absolute
+    right: 40px
+    height: 100%
+    display: flex
+    align-items: center
+  li
+    display: inline-block
+  a
+    padding: 5px
+    margin: 0 8px
+    display: block
+  span
+    display: inline-block
+  .footer-facebook
+    @include sprite($facebook-white)
+  .footer-twitter
+    @include sprite($twitter-white)
+  .footer-linkedin
+    @include sprite($linked-in-white)
+  .footer-instagram
+    @include sprite($instagram-white)
+// end FOOTER
+
+
+
+
+
+
+
+
+
+
+
+
+//***** modal popup for section 'news' & 'our work'
+.wrapper-popup-article
+  display: none
+.article-popup,
+.article-popup2,
+.article-popup3
+  position: relative
+  left: 0
+  right: 0
+  top: 50px
+  padding: 0 0 50px
+  margin: auto
+  max-width: 1200px
+  text-align: center
+  background: $white-color
+  margin-bottom: 50px
+.header-in-popup
+  padding: 0 15px
+  img
+    padding: 90px 0 40px
+  p
+    padding-bottom: 40px
+    font-family: Helvetica
+    font-size: 16px
+    color: #959595
+.wrapp-descr-popup
+  display: flex
+  text-align: left
+.column-left-popup
+  padding: 0 30px 0 90px
+  width: 600px
+  font-family: Helvetica
+  font-size: 25px
+  color: #363636
+  strong
+    font-weight: normal
+    color: $main-color-orange
+.column-right-popup
+  padding: 0 90px 0 30px
+  width: 600px
+  p
+    font-family: Helvetica
+    font-size: 18px
+    color: #707070
+    &:last-child
+      padding-top: 30px
+  img
+    padding: 30px 0
+    display: block
+    max-width: 100%
+    height: auto
+.article-popup2
+  background: #986
+  .our-purpose-video
+    width: 100%
+  .btn-img-video
+    height: 400px
+    img
+      height: 400px
+  .video-button
+    height: 60px
+    width: 60px
+    &::after
+      left: 25px
+      top: 16px
+  .video-thumbnail
+    margin-top: 50px
+    height: 350px
+.article-popup3
+  background: #699
+
+// our work popup
+.wrapper-popup-ourwork
+  display: none
+.project-popup1,
+.project-popup2,
+.project-popup3
+  position: relative
+  left: 0
+  right: 0
+  top: 50px
+  padding: 0 0 50px
+  margin: auto
+  max-width: 1200px
+  text-align: center
+  margin-bottom: 50px
+  ul
+    padding-bottom: 60px
+  li
+    vertical-align: middle
+    display: inline-block
+    font-family: Helvetica
+    font-size: 16px
+    color: #959595
+  .icon-new-popup
+    @include sprite($icon-new-orange)
+    margin: 0 80px
+    display: inline-block
+  .column-right-popup
+    p
+      padding: 0
+  .center-in-popup
+    padding: 40px 90px 0
+    text-align: left
+    img
+      margin-top: 90px
+      display: block
+      max-width: 100%
+      height: auto
+    p
+      position: relative
+      margin-top: 30px
+      font-family: Helvetica
+      font-size: 18px
+      color: #707070
+      display: inline-block
+      cursor: pointer
+      outline: none
+      &:hover
+        color: #000
+      &::before
+        content: attr(data-title)
+        display: none
+        position: absolute
+        z-index: 1
+        bottom: 100%
+        left: 10%
+        background: $white-color
+        border-radius: 40px 40px 40px 0
+        box-shadow: 5px 5px 0.5em -0.1em rgba(0,0,6,0.5)
+        color: #000
+        font-size: 22px
+        font-family: Helvetica
+        cursor: default
+        padding: 20px 25px
+        width: 200px
+        min-height: 50px
+        //height: auto
+      &:focus
+        &::before
+          display: block
+.project-popup1
+  background: #645
+.project-popup2
+  background: $white-color
+.project-popup3
+  background: #284727
