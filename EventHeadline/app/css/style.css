@@ -231,7 +231,7 @@ img {
   font-family: "Intro-Caps";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/intro-Regular-caps.eot?#iefix") format("embedded-opentype"), url("../fonts/intro-Regular-caps.woff2") format("woff2"), url("../fonts/intro-Regular-caps.woff") format("woff"), url("../fonts/intro-Regular-caps.ttf") format("truetype"), url("../fonts/intro-Regular-caps.svg#Intro-Caps") format("svg"); }
+  src: url("../fonts/intro-regular-caps.eot?#iefix") format("embedded-opentype"), url("../fonts/intro-regular-caps.woff2") format("woff2"), url("../fonts/intro-regular-caps.woff") format("woff"), url("../fonts/intro-regular-caps.ttf") format("truetype"), url("../fonts/intro-regular-caps.svg#Intro-Caps") format("svg"); }
 
 a,
 button {
